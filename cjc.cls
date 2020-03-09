@@ -199,18 +199,14 @@
 \newcommand\cjc@volume{1}
 \fancypagestyle{main}{%
   \fancyhf{}%
-  \fancyhead[LO]{\cjc@hf@font \cjc@number{} 期}%
-  \fancyhead[CO]{\cjc@hf@font 作者名等：论文题目}%
+  \fancyhead[CO]{\cjc@hf@font \cjc@author：\cjc@title}%作者名等：论文题目
   \fancyhead[RO,LE]{\cjc@hf@font\thepage}%
-  \fancyhead[CE]{\cjc@hf@font 计算机学报}%
-  \fancyhead[RE]{\cjc@hf@font \the\year{} 年}%
+  \fancyhead[CE]{\cjc@hf@font 北京航空航天大学学报}%
 }
 \pagestyle{main}
 \fancypagestyle{plain}{%
   \fancyhf{}%
-  \fancyhead[L]{\cjc@hf@font 第 \cjc@volume{} 卷\quad 第 \cjc@number{} 期\\\the\year{} 年 \the\month{} 月}%
-  \fancyhead[C]{\cjc@hf@font 计算机学报\\CHINESE JOURNAL OF COMPUTERS}%
-  \fancyhead[R]{\cjc@hf@font Vol. \cjc@volume\quad No. \cjc@number\\\cjc@doi}%
+  \fancyhead[C]{\cjc@hf@font 北{} 京{} 航{} 空{} 航{} 天{} 大{} 学{} 学{} 报\\Journal of Beijing University of Aeronautics and Astronautics}%
 }
 \newcommand\cjc@clc{*****}
 \newcommand\cjc@doi{10.1000/182}
@@ -230,27 +226,34 @@
     \centering
     \heiti\zihao{2}\cjc@title\par
   \endgroup
-  \vspace*{7.8\bp@}%
+  \vspace*{7.8\bp@}
+  \begingroup
+    \centering
+    \zihao{4}\cjc@author\par
+    \vspace*{7.8\bp@}
+    \zihao{6}\cjc@affiliation\par
+  \endgroup
+  \vspace*{5\bp@}%
   \begingroup
     \zihao{-5}%
     \textbf{摘\quad 要}\quad\cjc@abstract\par
-    关键词\quad\cjc@keywords\par
-    中图法分类号\quad\cjc@clc\qquad
-    DOI 号\quad\cjc@doi\par
+    \textbf{关键词}\quad\cjc@keywords\par\
+    % 中图法分类号\quad\cjc@clc\qquad
+    % DOI 号\quad\cjc@doi\par
   \endgroup
 }
 \def\cjc@make@en@title{%
-  \vspace*{12\bp@}%
-  \begingroup
-    \centering
-    \bfseries\zihao{4}\@nameuse{cjc@title*}\par
-  \endgroup
-  \vspace{5\bp@}%
-  \begingroup
-    \zihao{-5}%
-    \textbf{Abstract}\quad\@nameuse{cjc@abstract*}\par
-    \textbf{Key words}\quad\@nameuse{cjc@keywords*}\par
-  \endgroup
+  % \vspace*{12\bp@}%
+  % \begingroup
+  %   \centering
+  %   \bfseries\zihao{4}\@nameuse{cjc@title*}\par
+  % \endgroup
+  % \vspace{5\bp@}%
+  % \begingroup
+  %   \zihao{-5}%
+  %   \textbf{Abstract}\quad\@nameuse{cjc@abstract*}\par
+  %   \textbf{Key words}\quad\@nameuse{cjc@keywords*}\par
+  % \endgroup
 }
 \renewenvironment{abstract}{%
     \if@twocolumn

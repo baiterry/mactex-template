@@ -14,54 +14,14 @@
 
 \cjcsetup{
   title        = {题目},
-  title*       = {Title},
-  authors      = {
-    {
-      name         = {作者名 1},
-      name*        = {Name 1},
-      affiliations = {aff1},
-      bio          = {性别，xxxx年生，学历，职称，主要研究领域为*****、****},
-      email        = {***@***.***},
-    },
-    {
-      name         = {作者名 2},
-      name*        = {Name 2},
-      affiliations = {aff2, aff3},
-      bio          = {性别，xxxx年生，学历，职称，主要研究领域为*****、****},
-      email        = {***@***.***},
-    },
-    {
-      name         = {作者名 3},
-      name*        = {Name 3},
-      affiliations = {aff3},
-      bio          = {性别，xxxx年生，学历，职称，主要研究领域为*****、****},
-      email        = {***@***.***},
-    },
-  },
-  affiliations = {
-    aff1 = {
-      name  = {单位全名 部门(系)全名, 市(或直辖市) 国家名 邮政编码},
-      name* = {Department of ****, University, City ZipCode, Country},
-    },
-    aff2 = {
-      name  = {单位全名 部门(系)全名, 市(或直辖市) 国家名 邮政编码},
-      name* = {Department of ****, University, City ZipCode, Country},
-    },
-    aff3 = {
-      name  = {单位全名 部门(系)全名, 市(或直辖市) 国家名 邮政编码},
-      name* = {Department of ****, University, City ZipCode, Country},
-    },
-  },
+  author      = {作者},
+  affiliation = {作者介绍},
   abstract     = {
     中文摘要内容置于此处(英文摘要中要有这些内容)，字体为小5号宋体。
     摘要贡献部分，要有数据支持，不要出现“...大大提高”、“...显著改善”等描述，
     正确的描述是“比…提高X\%”、 “在…上改善X\%”。
-  },
-  % 中文关键字与英文关键字对应且一致，应有5-7个关键词
+    },
   keywords     = {关键词, 关键词, 关键词, 关键词},
-  abstract*    = {Abstract},
-  % 中文关键字与英文关键字对应且一致，不要用英文缩写
-  keywords*    = {key word, key word, key word, key word},
 }
 
 \maketitle
@@ -139,19 +99,10 @@
 15）组合单位采用标准格式，如：“pJ/bit/m4”应为“\si{pJ/(bit.m^4)}”
 
 
-\begin{theorem}
-  定理内容。
-  “定义”、“假设”、“公理”、“引理”等的排版格式与此相同，详细定理证明、公式可放在附录中。
-\end{theorem}
-
-\begin{proof}
-  证明过程.
-\end{proof}
-
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=\linewidth]{example-fig.pdf}
-  \caption{图片说明 *字体为小 5 号，图片应为黑白图，图中的子图要有子图说明*}
+  \includegraphics[width=\linewidth]{img/example-fig.pdf}
+  \caption{图片说明 *字体为小 5 号，图片应为黑白图，图中的子图要有子图说明*}\label{example-fig}
 \end{figure}
 
 \begin{table}[htb]
@@ -169,6 +120,15 @@
   \end{tabular}
 \end{table}
 
+% \begin{theorem}
+%   定理内容。
+%   “定义”、“假设”、“公理”、“引理”等的排版格式与此相同，详细定理证明、公式可放在附录中。
+% \end{theorem}
+
+% \begin{proof}
+%   证明过程.
+% \end{proof}
+
 % \begin{procedure}
 %   定理内容。
 %   “定义”、“假设”、“公理”、“引理”等的排版格式与此相同，详细定理证明、公式可放在附录中。
@@ -182,41 +142,13 @@
 
 
 \section*{致谢}
-
 致谢内容。
 
 
 \nocite{*}
-
 \bibliographystyle{cjc}
 \bibliography{refs}
 
 
-
-\appendix
-
-\section{}
-
-附录内容置于此处，字体为小5号宋体。附录内容包括：详细的定理证明、公式推导、原始数据等
-
-
-
-% \begin{background}
-% *论文背景介绍为英文，字体为小5号Times New Roman体*
-
-% 论文后面为400单词左右的英文背景介绍。介绍的内容包括：
-
-% 本文研究的问题属于哪一个领域的什么问题。该类问题目前国际上解决到什么程度。
-
-% 本文将问题解决到什么程度。
-
-% 课题所属的项目。
-
-% 项目的意义。
-
-% 本研究群体以往在这个方向上的研究成果。
-
-% 本文的成果是解决大课题中的哪一部分，如果涉及863/973以及其项目、基金、研究计划，注意这些项目的英文名称应书写正确。
-% \end{background}
 
 \end{document}
