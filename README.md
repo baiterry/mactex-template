@@ -14,7 +14,7 @@ brew cask install mactex
 生成文件 `main.pdf`：
 ```shell
 xelatex main
-bibtex mian
+bibtex main
 xelatex main
 xelatex main
 ```
